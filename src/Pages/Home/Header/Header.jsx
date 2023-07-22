@@ -17,26 +17,24 @@ const Header = () => {
   return (
     <>
       <header className="bg-white">
-        <div className="container flex flex-col-reverse px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
-          <div className="flex flex-col items-center w-full lg:flex-row lg:w-1/2 mt-8 lg:m-0">
-            <div className="max-w-lg lg:mx-12 lg:order-2">
-              <h1 className="text-2xl font-semibold tracking-wide md:text-3xl">
-                Empowering Your Educational Journey through Admissions
-              </h1>
-              <p className="mt-4">
-                Welcome to AdmissionPro - Your all-in-one admission portal for
-                students and aspiring learners. We provide a seamless and
-                user-friendly platform that empowers you to explore a wide range
-                of educational opportunities
-              </p>
-              <div className="mt-6">
-                <a
-                  href="#"
-                  className="px-6 py-2.5 mt-6 text-md font-medium leading-5 text-center text-white capitalize bg-[#fc5c3f] hover:bg-[#fc5c3f] lg:mx-0 lg:w-auto focus:outline-none hover:opacity-80"
-                >
-                  Explore more
-                </a>
-              </div>
+        <div className="container flex flex-col-reverse px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row-reverse lg:items-center mb-16">
+          <div className="max-w-lg lg:mr-auto lg:order-2 my-8">
+            <h1 className="text-2xl font-semibold tracking-wide md:text-3xl">
+              Empowering Your Educational Journey through Admissions
+            </h1>
+            <p className="mt-4">
+              Welcome to AdmissionPro - Your all-in-one admission portal for
+              students and aspiring learners. We provide a seamless and
+              user-friendly platform that empowers you to explore a wide range
+              of educational opportunities
+            </p>
+            <div className="mt-6">
+              <a
+                href="#"
+                className="px-6 py-2.5 mt-6 text-md font-medium leading-5 text-center text-white capitalize bg-[#fc5c3f] hover:bg-[#fc5c3f] lg:mx-0 lg:w-auto focus:outline-none hover:opacity-80"
+              >
+                Explore more
+              </a>
             </div>
           </div>
           <div className="flex items-center justify-center w-full h-64 md:h-96 md:w-1/2">

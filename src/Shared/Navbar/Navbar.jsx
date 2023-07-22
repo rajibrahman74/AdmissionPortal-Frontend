@@ -12,7 +12,7 @@ const Navbar = () => {
               src={logo}
               alt=""
             />
-          <div className="flex items-center justify-center mt-6 capitalize d">
+          <div className="flex items-center justify-center mt-6 text-sm md:text-base">
             <Link
               to="/"
               className="mx-2  border-b-2 border-blue-500  sm:mx-6"
