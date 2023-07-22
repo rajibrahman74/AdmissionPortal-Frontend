@@ -1,42 +1,80 @@
-import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// slider image import
+import slider1 from "../../../../public/assets/slider1.jpg";
+import slider2 from "../../../../public/assets/slider2.jpg";
+import slider3 from "../../../../public/assets/slider3.jpg";
+import slider4 from "../../../../public/assets/slider4.jpg";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper/modules";
 
 const Header = () => {
   return (
     <>
       <header className="bg-white">
-        <div className="container flex flex-col px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
-          <div className="flex flex-col items-center w-full lg:flex-row lg:w-1/2">
-            <div className="flex justify-center order-2 mt-6 lg:mt-0 lg:space-y-3 lg:flex-col">
-              <button className="w-3 h-3 mx-2 bg-blue-500 rounded-full lg:mx-0 focus:outline-none" />
-              <button className="w-3 h-3 mx-2 bg-gray-300 rounded-full lg:mx-0 focus:outline-none hover:bg-blue-500" />
-              <button className="w-3 h-3 mx-2 bg-gray-300 rounded-full lg:mx-0 focus:outline-none hover:bg-blue-500" />
-              <button className="w-3 h-3 mx-2 bg-gray-300 rounded-full lg:mx-0 focus:outline-none hover:bg-blue-500" />
-            </div>
+        <div className="container flex flex-col-reverse px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+          <div className="flex flex-col items-center w-full lg:flex-row lg:w-1/2 mt-8 lg:m-0">
             <div className="max-w-lg lg:mx-12 lg:order-2">
-              <h1 className="text-3xl font-semibold tracking-wide lg:text-4xl">
-                The best Apple Watch apps
+              <h1 className="text-2xl font-semibold tracking-wide md:text-3xl">
+                Empowering Your Educational Journey through Admissions
               </h1>
               <p className="mt-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut
-                quia asperiores alias vero magnam recusandae adipisci ad vitae
-                laudantium quod rem voluptatem eos accusantium cumque.
+                Welcome to AdmissionPro - Your all-in-one admission portal for
+                students and aspiring learners. We provide a seamless and
+                user-friendly platform that empowers you to explore a wide range
+                of educational opportunities
               </p>
               <div className="mt-6">
                 <a
                   href="#"
-                  className="px-6 py-2.5 mt-6 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-600 rounded-lg hover:bg-blue-500 lg:mx-0 lg:w-auto focus:outline-none"
+                  className="px-6 py-2.5 mt-6 text-md font-medium leading-5 text-center text-white capitalize bg-[#fc5c3f] hover:bg-[#fc5c3f] lg:mx-0 lg:w-auto focus:outline-none hover:opacity-80"
                 >
                   Explore more
                 </a>
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center w-full h-96 lg:w-1/2">
-            <img
-              className="object-cover w-full h-full max-w-2xl rounded-md"
-              src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
-              alt="apple watch photo"
-            />
+          <div className="flex items-center justify-center w-full h-64 md:h-96 md:w-1/2">
+            <Swiper
+              pagination={{
+                dynamicBullets: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img
+                  className="object-cover w-full h-full max-w-2xl rounded-md"
+                  src={slider1}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className="object-cover w-full h-full max-w-2xl rounded-md"
+                  src={slider2}
+                  alt=""
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className="object-cover w-full h-full max-w-2xl rounded-md"
+                  src={slider3}
+                  alt=""
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className="object-cover w-full h-full max-w-2xl rounded-md"
+                  src={slider4}
+                  alt=""
+                />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </header>
