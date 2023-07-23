@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../../public/assets/admission-portal logo.png"; // Import your CSS file with the active-link class
 import "../../../src/index.css";
+import { AuthContext } from "../../providers/AuthProviders";
 
 const Navbar = () => {
+  // const {user} = useContext(AuthContext)
+  // console.log(object);
   return (
     <>
       <nav className="bg-white text-black">
