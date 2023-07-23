@@ -43,11 +43,11 @@ const Navbar = () => {
               My College
             </NavLink>
             <NavLink
-              to="/signup"
+              to="/login"
               activeClassName="active-link"
               className="mx-2 border-b-2 border-transparent hover:border-blue-500 sm:mx-6"
             >
-              Sign up
+              Login
             </NavLink>
           </div>
         </div>
