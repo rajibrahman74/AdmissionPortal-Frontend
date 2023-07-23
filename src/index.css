@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active-link {
+    border-bottom: 2px solid #3b82f6; /* Replace this with the desired border color */
+    /* You can add any other styles for the active link here */
+  }
