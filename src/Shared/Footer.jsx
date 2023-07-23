@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../public/assets/admission-portal logo.png"
+import logo from "../../public/assets/admission-portal logo.png";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className="container mx-auto px-6 relative z-10 bg-white lg:pt-[120px]">
         <div className="container">
           <div className="flex flex-wrap -mx-4">
-            <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
+            <div className="w-full px-4 pt-8 lg:pt-0 sm:w-2/3 lg:w-3/12">
               <div className="w-full mb-10">
                 <img className="w-64 mb-5" src={logo} alt="" />
                 <p className="text-base mb-7 text-body-color">
