@@ -1,13 +1,52 @@
-import React from "react";
+import React, { useContext } from "react";
+import Swal from "sweetalert2"; // Make sure to import Swal library
+import { AuthContext } from "../../providers/AuthProviders";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
+  const { createUser } = useContext(AuthContext);
+
   const handleSingUp = (e) => {
     e.preventDefault();
 
     const form = e.target;
-    const name = form.name.value;
+    const displayName = form.displayName.value;
     const email = form.email.value;
     const password = form.password.value;
+
+    console.log(displayName, email, password);
+
+    createUser(email, password, displayName)
+      .then((result) => {
+        // User create process, update profile
+        const loggedUser = result.user;
+        return updateProfile(loggedUser, {
+          displayName: displayName,
+        }).then(() => {
+          console.log("Profile updated successfully");
+          console.log(loggedUser);
+
+          // sweet alert
+          Swal.fire({
+            position: "top-start",
+            icon: "success",
+            title: "User created successfully",
+            showConfirmButton: false,
+            timer: 3000,
+          });
+          form.reset();
+        });
+      })
+      .catch((error) => {
+        console.error("Error creating user:", error.message);
+        Swal.fire({
+          position: "top-start",
+          icon: "error",
+          title: `${error.message}`,
+          showConfirmButton: false,
+          timer: 3000,
+        });
+      });
   };
 
   return (
@@ -65,8 +104,8 @@ const SignUp = () => {
                         required=""
                         type="text"
                         className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                        id="name"
-                        name="name"
+                        id="displayName"
+                        name="displayName"
                       />
                     </div>
                     <div className="mb-1 sm:mb-2">
@@ -93,7 +132,7 @@ const SignUp = () => {
                         Password
                       </label>
                       <input
-                        placeholder="john.doe@example.org"
+                        placeholder="password"
                         required=""
                         type="password"
                         className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
