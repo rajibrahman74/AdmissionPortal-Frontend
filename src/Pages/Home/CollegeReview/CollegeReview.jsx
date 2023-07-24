@@ -61,7 +61,7 @@ const CollegeReview = () => {
                   </div>
 
                   <p className="mt-1 text-lg font-medium text-gray-700">
-                    Maryam Tufayel
+                    Selena Gomez
                   </p>
                 </div>
               </div>
