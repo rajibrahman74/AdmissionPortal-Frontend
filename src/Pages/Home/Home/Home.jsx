@@ -1,4 +1,5 @@
 import CollegeGellary from "../CollegeGellary/CollegeGellary";
+import CollegeReview from "../CollegeReview/CollegeReview";
 import Header from "../Header/Header";
 import UnearthingColleges from "../UnearthingColleges/UnearthingColleges";
 
@@ -8,6 +9,7 @@ const Home = () => {
       <Header />
       <UnearthingColleges />
       <CollegeGellary />
+      <CollegeReview />
     </>
   );
 };
