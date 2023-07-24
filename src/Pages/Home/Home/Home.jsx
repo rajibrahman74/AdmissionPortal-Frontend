@@ -1,3 +1,4 @@
+import CollegeGellary from "../CollegeGellary/CollegeGellary";
 import Header from "../Header/Header";
 import UnearthingColleges from "../UnearthingColleges/UnearthingColleges";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <Header />
       <UnearthingColleges />
+      <CollegeGellary />
     </>
   );
 };

@@ -5,7 +5,7 @@ const CollageDetails = () => {
   const collageInfo = useLoaderData();
 
   return (
-    <section className="container mx-auto mb-8 mt-4">
+    <section className="container mx-auto mt-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg p-8">
         {/* Left Side - Image */}
         <div>

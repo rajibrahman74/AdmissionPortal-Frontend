@@ -4,7 +4,7 @@ import logo from "../../public/assets/admission-portal logo.png";
 const Footer = () => {
   return (
     <>
-      <footer className="container mx-auto px-6 relative z-10 bg-white lg:pt-[120px]">
+      <footer className="container mx-auto px-6 relative z-10 bg-white lg:pt-[120px] mt-8">
         <div className="container">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full px-4 pt-8 lg:pt-0 sm:w-2/3 lg:w-3/12">

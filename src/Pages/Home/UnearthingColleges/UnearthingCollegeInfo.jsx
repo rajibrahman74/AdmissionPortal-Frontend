@@ -13,6 +13,7 @@ const UnearthingCollegeInfo = ({ unearthingCollage }) => {
     research_history,
     sports_categories,
   } = unearthingCollage;
+
   return (
     <div className="mx-auto w-full max-w-sm pt-6">
       <div className=" shadow-md border">
