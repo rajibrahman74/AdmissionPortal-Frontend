@@ -42,7 +42,7 @@ const CollegeGellary = () => {
             />
             {hoveredIndex === index && (
               <button
-                className="absolute md:top-[115px] md:left-[120px] transform -translate-x-1/2 -translate-y-1/2 border-0 opacity-75 bg-[#fc5c3f] hover:bg-[#fc5c3f] text-white px-6 py-2 font-semibold"
+                className="absolute md:top-[115px] md:left-[120px] transform -translate-x-1/2 -translate-y-1/2 border-0 opacity-75 bg-[#fc5c3f] hover:bg-[#fc5c3f] hover:opacity-80 text-white px-6 py-2 font-semibold"
                 data-aos="fade-up"
                 data-aos-duration="500"
               >

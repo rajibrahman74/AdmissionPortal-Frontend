@@ -24,6 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/collages",
         element: <Collages />,
+        loader: () => fetch("http://localhost:5000/card-datas"),
       },
       {
         path: "/signup",
