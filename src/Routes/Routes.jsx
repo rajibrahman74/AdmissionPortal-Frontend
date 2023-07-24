@@ -5,6 +5,8 @@ import Collages from "../Pages/Collages/Collages";
 import SignUp from "../Pages/SignUp/SignUp";
 import Login from "../Pages/Login/Login";
 import CollageDetails from "../Pages/Home/UnearthingColleges/CollageDetails";
+import Admission from "../Pages/Admission/CollegeList";
+import CollegeList from "../Pages/Admission/CollegeList";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +27,15 @@ const router = createBrowserRouter([
         path: "/collages",
         element: <Collages />,
         loader: () => fetch("http://localhost:5000/card-datas"),
+      },
+      {
+        path: "/admission",
+        element: <CollegeList />,
+        loader: () => fetch("http://localhost:5000/card-datas"),
+      },
+      {
+        path: "/admission/:id",
+        element: <Admission></Admission>,
       },
       {
         path: "/signup",
