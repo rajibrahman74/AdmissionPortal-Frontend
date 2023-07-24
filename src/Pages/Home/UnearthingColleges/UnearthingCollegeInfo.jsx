@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const UnearthingCollegeInfo = ({ unearthingCollage }) => {
-  console.log(unearthingCollage);
+  // console.log(unearthingCollage);
 
   const {
+    _id,
     college_image,
     college_name,
     admission_dates,
@@ -68,9 +70,11 @@ const UnearthingCollegeInfo = ({ unearthingCollage }) => {
               <span className="mt-0">Sports: {sports_categories.length}</span>
             </p>
           </div>
-          <button className="flex justify-center mx-auto border font-semibold w-full mt-3 py-2 bg-[#fc5c3f] hover:bg-[#fc5c3f] hover:opacity-80 text-white">
-            More Info
-          </button>
+          <Link to={`/collagedetails/${_id}`}>
+            <button className="flex justify-center mx-auto border font-semibold w-full mt-3 py-2 bg-[#fc5c3f] hover:bg-[#fc5c3f] hover:opacity-80 text-white">
+              More Info
+            </button>
+          </Link>
         </div>
       </div>
     </div>
